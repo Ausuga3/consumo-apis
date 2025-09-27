@@ -1,0 +1,26 @@
+<div class="container ">
+     
+    @if (selectedUser()) {
+        <div class="event-info selected">
+          <p><strong>🔍 Usuario Seleccionado:</strong> {{ selectedUser()!.name }}</p>
+        </div>
+      }
+
+      @if (favoritedUser()) {
+        <div class="event-info favorited">
+          <p><strong>⭐ Último Favorito:</strong> {{ favoritedUser()!.name }}</p>
+        </div>
+      }
+
+
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+        @for (user of users(); track user.id) {
+          <app-user-card 
+            [user]="user"
+            (userSelected)="handleUserSelected($event)"
+            (userFavorited)="handleUserFavorited($event)"
+          />
+        }
+      </div>
+
+</div>

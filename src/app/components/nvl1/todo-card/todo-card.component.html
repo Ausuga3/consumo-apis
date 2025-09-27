@@ -1,0 +1,13 @@
+<div class="todo-card" [class.completed]="user().completed">
+      <div class="todo-header">
+        <span class="todo-id">ID: {{ user().id }}</span>
+        <span class="user-id">Usuario: {{ user().userId }}</span>
+        <span class="status" [class.completed]="user().completed">
+          {{ user().completed ? '✅ Completado' : '⏳ Pendiente' }}
+        </span>
+      </div>
+      
+      <div class="todo-content">
+        <h3>{{ user().title }}</h3>
+      </div>
+</div>

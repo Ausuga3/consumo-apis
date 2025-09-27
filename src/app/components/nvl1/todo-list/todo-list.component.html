@@ -1,0 +1,10 @@
+
+<div class="todo-container">
+  <h1>Lista de TODOs</h1>
+  
+  <div class="todos-list">
+    @for (user of todos(); track user.id) {
+      <app-todo-card [user]="user" />
+    }
+  </div>
+</div>
