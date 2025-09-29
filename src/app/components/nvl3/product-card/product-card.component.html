@@ -1,0 +1,15 @@
+
+<div class="card" style="width: 18rem;">
+  <img src="{{ product().image}}" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+  <div class="card-body">
+    <h5 class="card-title">{{ product().title | slice:0:20}}</h5>
+    <p class="card-text">{{ product().description | slice:0:50}}</p>
+    <p class="card-text"><strong>Precio: ${{ product().price }}</strong></p>
+    <p class="card-text"><small class="text-muted">Categoría: {{ product().category }}</small></p>
+
+    <div class="d-flex gap-5">
+      <a class="btn btn-primary">Comprar</a>
+      <a class="btn btn-danger" (click)="ondDeleteClick()">Eliminar</a>
+    </div>
+  </div>
+</div>

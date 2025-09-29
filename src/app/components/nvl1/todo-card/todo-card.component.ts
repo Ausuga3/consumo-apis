@@ -8,5 +8,5 @@ import { Todo } from '../../../interfaces/todo.interface';
 })
 export class TodoCardComponent { 
   // ✅ OBLIGATORIO - input() para recibir datos del padre
-  user = input.required<Todo>();
+     user = input.required<Todo>();
 }

@@ -9,7 +9,7 @@
 6. user-card.component.ts → Recibe y muestra cada item
 7. app.component.ts   → Renderiza la lista principal
 
-## Nivel 2: CHECKLIST NIVEL 2 - MAPPERS + OUTPUT
+## Nivel 2: CHECKLIST NIVEL 2 - MAPPERS
 1. Crear Interfaces
 - User (simple, solo lo que necesitas)
 - UserApiResponse (completa, estructura del API)
@@ -25,3 +25,10 @@
 - Signals para manejar eventos recibidos
 - Métodos handleEvent() para procesar outputs
 - Template que escuche los eventos (eventName)="handler($event)"
+
+## Nivel 3: Output
+1. Servicio: Agregué deleteProduct() y manejo de errores
+2. Componente Padre: Agregué onDeleteProduct() para manejar la eliminación
+3. Template Padre: Agregué el evento (deleteProduct) en el app-child
+4. Componente Hijo: Usé output<number>() (sintaxis nueva) y onDeleteClick()
+5. Template Hijo: Agregué botón con confirmación
